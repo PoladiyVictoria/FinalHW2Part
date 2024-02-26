@@ -1,0 +1,84 @@
+vpoladiy@vpoladiy-VM:~$ cat > Pets.txt
+
+собачка
+
+кошка
+
+хомячок
+
+попугайчик
+
+vpoladiy@vpoladiy-VM:~$ cat > PackAnimals.txt
+
+лошадка
+
+верблюд
+
+ослик 
+
+vpoladiy@vpoladiy-VM:~$ 
+vpoladiy@vpoladiy-VM:~$ cat Pets.txt PackAnimals.txt > HumanFriends.txt
+poladiy@vpoladiy-VM:~$ cat HumanFriends.txt 
+
+собачка
+
+кошка
+
+хомячок
+
+попугайчик
+
+лошадка
+
+верблюд
+
+ослик
+
+vpoladiy@vpoladiy-VM:~$ 
+vpoladiy@vpoladiy-VM:~$ mkdir LastHW
+poladiy@vpoladiy-VM:~$ sudo mv HumanFriends.txt /home/vpoladiy/LastHW
+
+[sudo] пароль для vpoladiy: 
+
+vpoladiy@vpoladiy-VM:~$ 
+poladiy@vpoladiy-VM:~$ cd LastHW/
+
+vpoladiy@vpoladiy-VM:~/LastHW$ ls -l
+
+итого 4
+
+-rw-rw-r-- 1 vpoladiy vpoladiy 103 лют 19 21:23 HumanFriends.txt
+
+vpoladiy@vpoladiy-VM:~/LastHW$
+poladiy@vpoladiy-VM:~/LastHW$ systemctl status mysql
+
+● mysql.service - MySQL Community Server
+
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+
+     Active: active (running) since Mon 2024-02-19 20:34:32 +03; 54min ago
+
+   Main PID: 1406 (mysqld)
+
+     Status: "Server is operational"
+
+      Tasks: 37 (limit: 4599)
+
+     Memory: 424.6M
+
+        CPU: 10.426s
+
+     CGroup: /system.slice/mysql.service
+
+             └─1406 /usr/sbin/mysqld
+
+
+
+лют 19 20:34:18 vpoladiy-VM systemd[1]: Starting MySQL Community Server...
+
+лют 19 20:34:32 vpoladiy-VM systemd[1]: Started MySQL Community Server.
+
+vpoladiy@vpoladiy-VM:~/LastHW$ 
+vpoladiy@vpoladiy-VM:~$ sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+vpoladiy@vpoladiy-VM:~$ sudo dpkg -i docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+poladiy@vpoladiy-VM:~$ sudo dpkg -r docker-ce-cli
